@@ -1,0 +1,23 @@
+pragma solidity ^0.4.21 < 0.6.12;
+
+contract Employee{
+    
+    string public emp_name;
+    uint public emp_id;
+    string public department;
+    uint public salary;
+    string public status;
+   
+    
+    function EmployeeDetails(string name, uint ID, string Department, uint Salary )public{
+        
+       emp_name = name;
+       emp_id = ID;
+       department = Department;
+       salary = Salary;
+    }
+    function getTransaction()public view returns(string, uint, string, uint, string){
+      return (emp_name, emp_id, department, salary, status);
+    }
+    
+}
