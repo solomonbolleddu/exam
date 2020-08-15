@@ -1,0 +1,24 @@
+pragma solidity ^0.4.21 < 0.6.12;
+
+contract Train_ticket{
+    
+    string public passenger_name;
+    uint public ticket_number;
+    uint public date;
+    uint public berth_number;
+    string public status;
+   
+    
+    function Train_ticket(string Name, uint TicketNumber, uint Date, uint BerthNumber)public{
+        
+       passenger_name = Name;
+       ticket_number = TicketNumber;
+       date = Date;
+       berth_number =BerthNumber;
+    }
+    function getTransaction()public view returns(string, uint, uint, uint, string){
+      return (passenger_name, ticket_number, date, berth_number, status);
+    }
+    
+}
+http://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.4.21+commit.dfe3193c.js
